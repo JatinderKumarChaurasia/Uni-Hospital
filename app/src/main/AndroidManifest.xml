@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.jatinderkumar.spla">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/prognosis"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/prognosis"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:enabled="true"
+            android:label="UniHospital"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".splash"
+            android:label="UniHospital"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Login"
+            android:label="Login"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity
+            android:name=".SignUp"
+            android:label="Sign Up"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".SignIn"
+            android:label="Sign In"
+            android:parentActivityName=".Login"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".User_list">
+        </activity>
+        <activity android:name=".Emergency">
+        </activity>
+        <activity android:name=".Emergency_Call">
+        </activity>
+        <activity android:name=".Medicine">
+        </activity>
+    </application>
+
+</manifest>
